@@ -1,0 +1,78 @@
+ï»¿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?php $this->load->view(TPL_FOLDER."header");?>
+<table width="100%" cellspacing="0" class="widefat">
+  <thead>
+    <tr>
+      <th colspan="2">ÏµÍ³ÐÅÏ¢</th>
+    </tr>
+  </thead>
+  <tbody id="check_box_id">
+    <tr>
+      <td height="30"><strong>Ö÷»úÃû (IP£º¶Ë¿Ú)£º</strong><?php echo $_SERVER['SERVER_NAME']?>(<?php echo $this->input->ip_address().":".$_SERVER['SERVER_PORT'];?>)</td>
+      <td ><strong>³ÌÐòÄ¿Â¼£º</strong><?php echo str_replace('templates\tadmin','',dirname( 'DADCCCDFFACFBA'  ));?></td>
+    </tr>
+    <tr>
+      <td height="30" ><strong>Web·þÎñÆ÷£º</strong><?php echo $_SERVER['SERVER_SOFTWARE']?></td>
+      <td ><strong>PHP ÔËÐÐ·½Ê½£º</strong><?php echo PHP_SAPI?></td>
+    </tr>
+    <tr>
+      <td height="30" ><strong>PHP°æ±¾£º</strong><?php echo PHP_VERSION?>??<span style="color:#999999">(ÐèÒª >= PHP4.0.2)</span></td>
+      <td ><strong>×î´óÉÏ´«ÏÞÖÆ£º</strong><?php echo ini_get('file_uploads') ? ini_get('upload_max_filesize') : '<span style="color:red">Disabled</span>';?></td>
+    </tr>
+    <tr>
+      <td height="30" ><strong>×î´óÖ´ÐÐÊ±¼ä£º</strong><?php echo ini_get('max_execution_time')?> seconds</td>
+      <td ><strong>Ô¶³ÌÎÄ¼þ»ñÈ¡£º</strong><?php echo ini_get('allow_url_fopen') ? 'Ö§³Ö' : '²»Ö§³Ö'?>??<span style="color:#FF6600">(Èç¹û·þÎñÆ÷²»Ö§³Ö½«ÎÞ·¨Ê¹ÓÃ¸Ã³ÌÐò)</span></td>
+    </tr>
+    <tr>
+      <td height="30" ><strong>¹ÜÀíÔ±ÕËºÅ£º</strong><?php echo $sys_user_name;?></td>
+      <td ><strong>ÉÏ´ÎµÇÂ½IP£º</strong><?php echo $sys_last_login_ip;?></td>
+    </tr>
+    <tr>
+      <td height="30" ><strong>ÉÏ´ÎµÇÂ½Ê±¼ä£º</strong><?php echo $sys_last_login_time;?></td>
+      <td ><strong>µÇÂ½´ÎÊý£º</strong><?php echo $sys_hits;?></td>
+    </tr>
+    <tr>
+      <td height="30" ><strong>¼¼ÊõÍÅ¶Ó£º</strong><a href="http://bbs.soke5.com" target="_blank" style="color:#FF0000">ËÑ¿ÍÌÔ±¦¿Í¹Ù·½ÍøÕ¾</a> ?? <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=732515587&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:732515587:45" alt="µã»÷ÕâÀï¸øÎÒ·¢ÏûÏ¢" title="µã»÷ÕâÀï¸øÎÒ·¢ÏûÏ¢" style="vertical-align:middle"> 732515587</a></td>
+      <td ><strong>³ÌÐò°æ±¾£º</strong><script type="text/javascript" src="http://bbs.soke5.com/ad/1005/789.js"></script> </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<table class="widefat" cellspacing="0">
+  <thead>
+    <tr>
+      <th><div class="allbtn" style="width:100px"><span class="ui-icon ui-icon-info"></span> <span>¹ÜÀí°ïÖúÐÅÏ¢</span></div></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><div class="w_tips">
+          <ul>
+          <li>½¨ÒéÉ¾³ýËùÓÐµÄÎÄÕÂ²âÊÔÊý¾Ý£¬ÎÄÕÂ·ÖÀà¿É²»É¾³ý¡£È»ºóÖØÐÂ²É¼¯Éú³É¾²Ì¬Ò³Ãæ¡£</li>
+            <li>Èç¹ûÄúÊÇµÚÒ»´ÎÊ¹ÓÃ¸ÃÍøÕ¾ºóÌ¨£¬<a style="color:#dd0000;" href="<?php echo site_url(CTL_FOLDER.'site_config');?>">ÇëÏÈµã»÷ÕâÀïÐÞ¸ÄÍøÕ¾ÐÅÏ¢ÅäÖÃ</a>,ÐÞ¸ÄÊ±ÇëÑÏ¸ñ°´ÕÕÌáÊ¾ÌîÐ´¡£¼ÇÂ¼ÅÅÐòÔ­Ôò£ºÊý×Ö´óµÄÅÅÇ°Ãæ¡£ </li>
+            <li>Èç¹ûÄúÊÇµÚÒ»´ÎÊ¹ÓÃ¸ÃÍøÕ¾ºóÌ¨£¬Çë½øÈëÒ³Ãæ£º¹ÜÀíÔ±ÉèÖÃ¡ª¡ª>ÐÞ¸ÄÃÜÂë ÐÞ¸ÄÄúµÄ¹ÜÀíÓÊÏä£¬µ±Íü¼Ç¹ÜÀíÃÜÂëµÄÊ±ºò ¿ÉÒÔÍ¨¹ý¸ÃÓÊÏäÕÒ»ØÃÜÂë¡£ </li>
+            
+          </ul>
+        </div></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="widefat" cellspacing="0">
+  <thead>
+    <tr>
+      <th><div class="allbtn" style="width:100px"><span class="ui-icon ui-icon-info"></span> <span>×îÐÂ¹Ù·½¸üÐÂ</span></div></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><div class="w_tips2">
+          <ul>
+ 
+          </ul>
+        </div></td>
+    </tr>
+  </tbody>
+</table>
+
+<?php $this->load->view(TPL_FOLDER."footer");?>
