@@ -180,6 +180,8 @@ if( isMobile.any() )
 		  $i++;
 		  }?>
     </p>
+
+      <!--
     <p><strong>友情链接：</strong>
       <?php foreach(get_cache('link') as $row){?>
       <a href="<?php echo $row->hplink;?>" target="_blank" title="<?php echo $row->title;?>"><?php echo $row->title;?></a>
@@ -187,7 +189,8 @@ if( isMobile.any() )
     </p>
     <p><?php echo $this->config->item('sys_site_copyright');?>
       技术支持：<a href="http://bbs.soke5.com/" target="_blank">搜客淘宝客</a>
-      <?php echo html_entity_decode($this->config->item('sys_tongji'),ENT_QUOTES);?> </p>
+      -->
+      <p><?php echo html_entity_decode($this->config->item('sys_tongji'),ENT_QUOTES);?> </p>
   </div>
 </div>
 <script language="javascript">

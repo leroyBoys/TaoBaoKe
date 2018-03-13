@@ -37,6 +37,7 @@ function check_submit(f)
 </head>
 
 <body>
+<!--
 <div id="site-nav">
   <div id="sn-bd">
     <div class="sn-container">
@@ -55,6 +56,7 @@ function check_submit(f)
     </div>
   </div>
 </div>
+-->
 <div id="header">
   <div class="headerLayout">
     <div class="headerCon">
